@@ -1,9 +1,11 @@
 "use client";
-import React from 'react'
+import React, { useState } from 'react'
 import {motion} from 'framer-motion'
 import {links} from '@/lib/data'
 import Link from 'next/link';
+import clsx from "clsx";
 const Header = () => {
+    const[  activeSection, setActiveSection]=useState("home")
   return (
     <header className="z-[999] relative">
         <motion.div  initial={{ y: -100, x: "-50%", opacity: 0 }}
@@ -18,10 +20,27 @@ const Header = () => {
                                 initial={{ y: -100, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}>
 
-                        <Link className='flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300' href={link.hash}>
-                            {link.name}
+                        <Link
+                         className={clsx( "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                                      {
+                                             "text-gray-950 dark:text-gray-200":
+                                             activeSection === link.name,
+                                         }
+                          )}href={link.hash} onClick={()=>{setActiveSection(link.name)}} >{link.name}
+
+                                 {link.name === activeSection && (
+                                     <motion.span
+                                           className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                                           layoutId="activeSection"
+                                          transition={{
+                                                type: "spring",
+                                                stiffness: 380,
+                                                damping: 30,
+                                                      }}
+                                        ></motion.span>
+                                 )}                     
                         </Link>
-                    </motion.li>
+                    </motion.li> 
                 ))}
             </ul>
         </nav>

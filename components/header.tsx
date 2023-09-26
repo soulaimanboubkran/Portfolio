@@ -4,8 +4,9 @@ import {motion} from 'framer-motion'
 import {links} from '@/lib/data'
 import Link from 'next/link';
 import clsx from "clsx";
+import { useActiveSectionContext } from '@/context/active-section-context';
 const Header = () => {
-    const[  activeSection, setActiveSection]=useState("home")
+    const{  activeSection, setActiveSection}=useActiveSectionContext()
   return (
     <header className="z-[999] relative">
         <motion.div  initial={{ y: -100, x: "-50%", opacity: 0 }}
@@ -36,7 +37,7 @@ const Header = () => {
                                                 type: "spring",
                                                 stiffness: 380,
                                                 damping: 30,
-                                                      }}
+                                                      }} 
                                         ></motion.span>
                                  )}                     
                         </Link>

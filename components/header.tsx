@@ -6,7 +6,7 @@ import Link from 'next/link';
 import clsx from "clsx";
 import { useActiveSectionContext } from '@/context/active-section-context';
 const Header = () => {
-    const{  activeSection, setActiveSection}=useActiveSectionContext()
+    const{  activeSection, setActiveSection,setTimeOfLastClick}=useActiveSectionContext()
   return (
     <header className="z-[999] relative">
         <motion.div  initial={{ y: -100, x: "-50%", opacity: 0 }}
@@ -27,7 +27,8 @@ const Header = () => {
                                              "text-gray-950 dark:text-gray-200":
                                              activeSection === link.name,
                                          }
-                          )}href={link.hash} onClick={()=>{setActiveSection(link.name)}} >{link.name}
+                          )}href={link.hash} onClick={()=>{setActiveSection(link.name);
+                                                            setTimeOfLastClick(Date.now())}} >{link.name}
 
                                  {link.name === activeSection && (
                                      <motion.span

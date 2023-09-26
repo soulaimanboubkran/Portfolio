@@ -6,9 +6,12 @@ import React from 'react'
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from '@/lib/hooks'
 const Intro = () => {
+  const {ref} = useSectionInView("Home")
   return (
     <section
+    ref={ref}
   className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     id="home"
   >

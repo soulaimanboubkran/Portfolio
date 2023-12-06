@@ -2,11 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import Project1 from "@/public/project1.jpg"
-import Project2 from "@/public/project2.jpg"
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+
+import shoptop1 from '@/public/shoptop1.jpg'
+import Blog from "@/public/BLog.jpg"
+
 
 export const links = [
   {
@@ -64,25 +63,28 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "ShopTop",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl:Project1,
+      "As a full-stack developer, I contributed to an E-commerce project, elevating its design and functionality. Notably, I integrated the Stripe payment system for secure transactions",
+    tags: ["React", "Strapi", "Mysql", "Scss", "Redux","Stripe"],
+    imageUrl:shoptop1,
+    gitLink:"https://github.com/soulaimanboubkran/ShopTop",
   },
   {
-    title: "rmtDev",
+    title: "Blog",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: Project2,
+      "I created this blog to enhance my skills in Next.js and various other technologies. It's a platform where anyone can contribute and share diverse content.",
+    tags: ["React", "JavaScript", "Next.js", "Css", "Prisma","Firebase","Auth.js" ],
+    imageUrl: Blog,
+    gitLink:"https://github.com/soulaimanboubkran/bloge2",
   },
   {
     title: "Word Analytics",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl:Project2,
+    imageUrl:Blog,
+    gitLink:"https://github.com/soulaimanboubkran/ShopTop",
   },
 ] as const;
 
@@ -98,7 +100,7 @@ export const skillsData = [
   "Node.js",
   "Auth.js",
   "Git",
-  
+  "Docker",
   "Prisma",
   "MongoDB",
   "Redux",

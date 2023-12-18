@@ -43,7 +43,7 @@ export default function Project({title,description,tags,imageUrl,gitLink}:Projec
               </li>
             ))}
             <li  className="dark:bg-red-500  bg-blue-700 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70">
-              <a href={gitLink} className="flex"> GitHub 
+              <a href={gitLink} target="_blank"className="flex"> GitHub 
  </a>
             </li>
           </ul> 

@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 
 import shoptop1 from '@/public/shoptop1.jpg'
 import Blog from "@/public/BLog.jpg"
-
+import webscraper from '@/public/webscraper.jpg'
 
 export const links = [
   {
@@ -79,12 +79,12 @@ export const projectsData = [
     gitLink:"https://github.com/soulaimanboubkran/bloge2",
   },
   {
-    title: "Word Analytics",
+    title: "Price tracker",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl:Blog,
-    gitLink:"https://github.com/soulaimanboubkran/ShopTop",
+      "An Amazon price tracker for getting the updates about any discounts on the products. ",
+    tags: ["React", "Next.js", "MongoDb", "Tailwind css", "Bright Data","Cron","TypeScript"],
+    imageUrl:webscraper,
+    gitLink:"https://github.com/soulaimanboubkran/webscraping",
   },
 ] as const;
 

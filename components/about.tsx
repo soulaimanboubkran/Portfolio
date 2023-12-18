@@ -1,7 +1,7 @@
 "use client";
 
 
-import React, { useEffect } from "react";
+import React from "react";
 
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
@@ -41,7 +41,7 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, watching movies, I also enjoy{" "}
+        <span className="italic">When I am not coding</span>, watching movies, I also enjoy{" "}
         <span className="font-medium">learning new things</span>, and searching about <span className="font-medium"> web technologies. </span>
       </p>
     

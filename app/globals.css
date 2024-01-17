@@ -13,3 +13,9 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+.gradient-bg {
+  background-image: linear-gradient(241deg, #55a6fe 22.4%, #7758e6 69.51%, #72d2ff 95.88%);
+}
+.gradient-bgD {
+  background-image: linear-gradient(241deg, #011429 22.4%, #0e298b 69.51%, #52280f 95.88%);
+}

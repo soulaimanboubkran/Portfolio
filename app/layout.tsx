@@ -25,9 +25,9 @@ export default function RootLayout({
       <div
   className="absolute  inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
 >
-<div className="bg-[#243ba4] absolute top-[-6rem] -z-10 right-[1rem] h-[55.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#7e393a]"></div>
+<div className="bg-[#195190FF] absolute top-[-6rem] -z-10 right-[1rem] h-[55.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#7e393a]"></div>
       
-      <div className="bg-[#3d2172] absolute top-[22rem] -z-10 left-[-33rem] h-[55.25rem] w-[66rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-44rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+      <div className="bg-[#A2A2A1FF] absolute top-[22rem] -z-10 left-[-33rem] h-[55.25rem] w-[66rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-44rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
 </div>
     
         <ThemeContextProvider>
@@ -39,7 +39,14 @@ export default function RootLayout({
             <Toaster position="top-right" />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
-        </ThemeContextProvider></body>
+        </ThemeContextProvider>
+
+
+         <div className="bg-[#A2A2A1FF] absolute bottom-[22rem] -z-10 left-[-33rem] h-[55.25rem] w-[66rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-44rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+      
+  <div className="bg-[#195190FF] absolute bottom-[-6rem] -z-10 right-[1rem] h-[55.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#7e393a]"></div>
+   
+        </body>
     </html>
   )
 }

@@ -16,7 +16,7 @@ export default function About() {
     <>
     <motion.section
      ref={ref}
-      className="mb-10 max-w-[45rem] text-center leading-8 sm:mb-10 scroll-mt-28"
+      className="mb-10 max-w-[45rem] text-center leading-8  scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -46,12 +46,7 @@ export default function About() {
       </p>
     
     </motion.section>
-    <div className="inline-flex mb-10 items-center justify-center w-full">
-    <hr className="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700"/>
-    <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
-        
-    </div>
-    </div>
+
     </>
   );
 }

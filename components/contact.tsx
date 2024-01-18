@@ -14,7 +14,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 sm:mb-28  w-[min(100%,38rem)] text-center"
       initial={{
         opacity: 0,
       }}
@@ -58,7 +58,7 @@ export default function Contact() {
           required
           maxLength={500}
           placeholder="Your email"
-          style={{ zIndex: 1}}
+         
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
@@ -66,7 +66,7 @@ export default function Contact() {
           placeholder="Your message"
           required
           maxLength={5000}
-          style={{ zIndex: 1}}
+         
         />
         <SubmitBtn  />
       </form>

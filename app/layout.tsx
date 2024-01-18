@@ -27,9 +27,7 @@ export default function RootLayout({
 >
 
   <div className="bg-[#195190FF] absolute z-[-10] dark:z-[-10] top-[-6rem] md:right-[1rem] right-[1rem] h-[66.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#7e393a]"></div>
-  <div className="bg-[#676394] absolute z-[-10] dark:z-[-10] top-[22rem] left-[-35rem] h-[99.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
-  <div className="bg-[#195190FF] absolute z-[-10] dark:z-[-10] bottom-[-6rem] md:right-[1rem] right-[1rem] h-[50.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#7e393a]"></div>
-  <div className="bg-[#ABD1C9FF] absolute z-[-10] dark:z-[-10] bottom-[22rem] left-[-35rem] h-[44.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+    <div className="bg-[#ABD1C9FF] absolute z-[-10] dark:z-[-10] bottom-[22rem] left-[-35rem] h-[44.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
  
 </div>
 

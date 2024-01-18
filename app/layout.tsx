@@ -28,8 +28,6 @@ export default function RootLayout({
 
 
 <p className="bg-[#195190FF] absolute top-[-6rem] z-[-13]  md:right-[1rem] right-[1rem] h-[66.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#7e393a]"></p>
-<p className="bg-[#676394] absolute top-[22rem] z-[-13] left-[-35rem] h-[99.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></p>
-<p className="bg-[#195190FF] absolute bottom-[-6rem] z-[-13]  md:right-[1rem] right-[1rem] h-[50.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#7e393a]"></p>
 <p className="bg-[#ABD1C9FF] absolute bottom-[22rem] z-[-13] left-[-35rem] h-[44.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></p>
       
 </div>

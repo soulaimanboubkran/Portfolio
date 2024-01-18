@@ -20,15 +20,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" >
       <body className={`${inter.className}  bg-[#FCF6F5FF] text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}>
    <div
-  className="absolute  inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:33px_33px]"
->
+  className="absolute z-[-11] inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:33px_33px]"
+></div>
 <div className="bg-[#195190FF] absolute top-[-6rem] -z-10 md:right-[1rem] right-[1rem] h-[66.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#7e393a]"></div>
         
 <div className="bg-[#A2A2A1FF] absolute top-[22rem] -z-10 left-[-35rem] h-[99.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
-</div>
+
     
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

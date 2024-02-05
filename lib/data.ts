@@ -69,6 +69,7 @@ export const projectsData = [
     tags: ["React", "Strapi", "Mysql", "Scss", "Redux","Stripe"],
     imageUrl:shoptop1,
     gitLink:"https://github.com/soulaimanboubkran/ShopTop",
+    web:""
   },
   {
     title: "Blog",
@@ -77,6 +78,7 @@ export const projectsData = [
     tags: ["React", "JavaScript", "Next.js", "Css", "Prisma","Firebase","Auth.js" ],
     imageUrl: Blog,
     gitLink:"https://github.com/soulaimanboubkran/bloge2",
+    web:"https://tomass.vercel.app"
   },
   {
     title: "Price tracker",
@@ -85,6 +87,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "MongoDb", "Tailwind css", "Bright Data","Cron","TypeScript"],
     imageUrl:webscraper,
     gitLink:"https://github.com/soulaimanboubkran/webscraping",
+    web:""
   },
 ] as const;
 

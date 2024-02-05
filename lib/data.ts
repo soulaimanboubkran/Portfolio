@@ -2,7 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-
+import we from '@/public/we.jpg'
 import shoptop1 from '@/public/shoptop1.jpg'
 import Blog from "@/public/BLog.jpg"
 import webscraper from '@/public/webscraper.jpg'
@@ -65,11 +65,20 @@ export const projectsData = [
   {
     title: "ShopTop",
     description:
-      "As a full-stack developer, I contributed to an E-commerce project, elevating its design and functionality. Notably, I integrated the Stripe payment system for secure transactions",
+      "As a full-stack developer, I contributed to an E-commerce project, elevating its design and functionality. Notably, I integrated the Stripe payment system for secure transactions.",
     tags: ["React", "Strapi", "Mysql", "Scss", "Redux","Stripe"],
     imageUrl:shoptop1,
     gitLink:"https://github.com/soulaimanboubkran/ShopTop",
     web:""
+  },
+  {
+    title: "WebSty",
+    description:
+      "This library provides a collection of JSX components designed to assist students in quickly finding well-styled components for ReactJS and JSX. Additionally, it features an integrated online code editor option, enhancing the learning experience.",
+    tags: ["React", "tailwind css","react-live","jsx","good routing!"],
+    imageUrl:we,
+    gitLink:"https://github.com/soulaimanboubkran/webSty",
+    web:"https://websty.vercel.app"
   },
   {
     title: "Blog",

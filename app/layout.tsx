@@ -36,9 +36,9 @@ export default function RootLayout({
         <div className="bg-[#607987]  h-8" />
         <div className="bg-[#889da0]  h-8" />
         <div className="bg-[#5c7786]  h-8" />
-        <div className="bg-[#080a11]  h-8" />
+        <div className="bg-[#335e6e]  h-8" />
         <div className="bg-[#385466]  h-8" />
-        <div className="bg-[#833b13]  h-8" />
+        <div className="bg-[#253647]  h-8" />
         <div className="bg-[#1c3441]  h-8" />
         <div className="bg-[#385466]  h-8" />
         <div className="bg-[#f5f6d2] dark:bg-[#2d796a] h-8" />

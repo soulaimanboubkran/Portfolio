@@ -6,7 +6,7 @@ import we from '@/public/we.jpg'
 import shoptop1 from '@/public/shoptop1.jpg'
 import Blog from "@/public/BLog.jpg"
 import webscraper from '@/public/webscraper.jpg'
-
+import real from '@/public/real.jpg';
 export const links = [
   {
     name: "Home",
@@ -71,7 +71,15 @@ export const projectsData = [
     gitLink:"https://github.com/soulaimanboubkran/ShopTop",
     web:""
   },
- 
+  {
+    title: "Finder",
+    description:
+      "Finder a market for realEstate and cars evry one can sell or rent realestate or cars , it is a saas project wher you pay to activate your  seller acount",
+    tags: ["React", "JavaScript", "Nodejs", "Tailwind css", "Firebase","MongoDb" ],
+    imageUrl: real,
+    gitLink:"https://github.com/soulaimanboubkran/RealEstatePF",
+    web:""
+  },
   {
     title: "Blog",
     description:

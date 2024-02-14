@@ -73,19 +73,12 @@ export const projectsData = [
   },
   {
     title: "Finder",
-    description:"This library offers a set of JSX components crafted to help students easily discover well-styled components for ReactJS and JSX. It also includes an integrated online code editor option, enhancing the overall learning experience.",
+    description:
+      "Finder is a marketplace for real estate and cars where anyone can buy, sell, or rent properties and vehicles. It is a SaaS project where users pay to activate their seller accounts.",
     tags: ["React", "JavaScript", "Nodejs", "Tailwind css", "Firebase","MongoDb" ],
     imageUrl: real,
     gitLink:"https://github.com/soulaimanboubkran/RealEstatePF",
     web:""
-  }, {
-    title: "WebSty",
-    description:
-      "This library provides a collection of JSX components designed to assist students in quickly finding well-styled components for ReactJS and JSX. Additionally, it features an integrated online code editor option, enhancing the learning experience.",
-    tags: ["React", "tailwind css","react-live","jsx","good routing!"],
-    imageUrl:we,
-    gitLink:"https://github.com/soulaimanboubkran/webSty",
-    web:"https://websty.vercel.app"
   },
   {
     title: "Blog",
@@ -95,6 +88,14 @@ export const projectsData = [
     imageUrl: Blog,
     gitLink:"https://github.com/soulaimanboubkran/bloge2",
     web:"https://tomass.vercel.app"
+  }, {
+    title: "WebSty",
+    description:
+      "This library provides a collection of JSX components designed to assist students in quickly finding well-styled components for ReactJS and JSX. Additionally, it features an integrated online code editor option, enhancing the learning experience.",
+    tags: ["React", "tailwind css","react-live","jsx","good routing!"],
+    imageUrl:we,
+    gitLink:"https://github.com/soulaimanboubkran/webSty",
+    web:"https://websty.vercel.app"
   },
   {
     title: "Price tracker",

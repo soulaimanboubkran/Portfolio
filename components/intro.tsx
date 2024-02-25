@@ -13,7 +13,7 @@ const Intro = () => {
   return (
     <section
     ref={ref}
-  className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+  className="mb-28  max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     id="home"
     
   >
@@ -55,15 +55,16 @@ const Intro = () => {
                </div>
              </div>
     <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium text-white !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium dark:text-white text-black !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       
       >
-        <span className="font-bold" >Hello, I am Soulaimane.</span> I am a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">2 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps.</span>
+        
+        <span className="font-bold dark:text-white text-black" >Hello, I am Soulaimane.</span> I am a{" "}
+        <span className="font-bold dark:text-white text-black">full-stack developer</span> with{" "}
+        <span className="font-bold dark:text-white text-black">2 years</span> of experience. I enjoy
+        building <span className="italic dark:text-white text-black">sites & apps.</span>
         
     </motion.h1>
 

@@ -33,9 +33,7 @@ export default function RootLayout({
       <div className="bg-[#f3faf0] absolute z-[-10] dark:z-[-10] top-[6rem] left-[-35rem] h-[66.25rem] w-[50rem] rounded-full blur-[3rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#0e1d29]"></div>
       <div className="bg-[#f3faf0] absolute z-[-10] dark:z-[-10] bottom-[-6rem] md:right-[1rem] right-[1rem] h-[44.25rem] w-[31.25rem] rounded-full blur-[2.5rem] sm:w-[68.75rem]  dark:bg-[#172a3a]"></div>
       <div className="bg-[#f5f6d2] absolute z-[-10] dark:z-[-10] bottom-[14rem] left-[-35rem] h-[33.25rem] w-[50rem] rounded-full blur-[3rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#2d796a]"></div>
-      
-</div>
- <div className="w-screen absolute bottom-[-9rem] flex h-1/5">
+      <div className="w-screen absolute bottom-[-9rem] flex h-2/5">
       <svg className="absolute bottom-0" viewBox="0 0 1425 100" fill="#2d796a" xmlns="http://www.w3.org/2000/svg">
         <g>
           <path d="M0,17.27l23.75,5.09C47.5,27.38,95,37.57,142.5,39.47s95-4.36,142.5-10.28,95-11.35,142.5-7.4,95,17.43,142.5,24,95,6.25,142.5,5.83,95-.9,142.5-3S950,43,997.5,42.92s95,3.12,142.5,2.88,95-4.11,142.5-3.62,95,5.51,118.75,8L1425,52.62v170.2H0Z" fill="#2d796a"></path>
@@ -48,6 +46,8 @@ export default function RootLayout({
         </defs>
       </svg>
     </div>
+</div>
+ 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             

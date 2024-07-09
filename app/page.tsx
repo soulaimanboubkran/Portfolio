@@ -8,10 +8,19 @@ import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
+import { LampDemo } from "@/components/ui/lamp";
 
 export default function Home() {
   return (
+    <>
+  <div 
+   
+   className=" absolute  -top-96 w-full overflow-hidden flex items-center justify-center rounded-lg">
+
+    <LampDemo/>
+     </div> 
     <main className="flex flex-col items-center z-[998] dark:z-[998] px-4">
+  
      <Intro/>
      <SectionDivider/>
      <About/>
@@ -22,6 +31,6 @@ export default function Home() {
      <Experience/>
      <Contact/>
      <Footer/>
-    </main>
+    </main></>
   )
 }

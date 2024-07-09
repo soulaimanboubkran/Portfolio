@@ -26,64 +26,44 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
     style={{
         transform: ` skewX(-30deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
       }} 
-  
       className={cn(
-        "absolute left-1/4 p-4 -top-1/4 flex -translate-x-1/2 -translate-y-1/2 w-full h-full -inset-2 z-0",
+      "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full -inset-2 z-0 ",
         className
       )}
       {...rest}
     >
       {rows.map((_, i) => (
         <div
-          key={`row${i}`}
-          className="sm:w-52 sm:h-52 w-36 h-36 border-l border-slate-700 relative"
+          key={`row` + i}
+          className="sm:w-52 sm:h-52 w-36 h-36 border-l  border-slate-700 relative"
         >
           {cols.map((_, j) => (
-            // Conditionally render motion.div based on isMobileViewport
-            isMobileViewport ? (
-              <div
-                key={`col${j}`}
-                className="sm:w-52 sm:h-52 w-36 h-36 border-r border-t border-slate-700 relative"
-              >
-                {j % 2 === 0 && i % 2 === 0 ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-700 stroke-[1px] pointer-events-none"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-                  </svg>
-                ) : null}
-              </div>
-            ) : (
-              <motion.div
-                key={`col${j}`}
-                whileHover={{
-                  backgroundColor: `var(${getRandomColor()})`,
-                  transition: { duration: 0 },
-                }}
-                animate={{
-                  transition: { duration: 2 },
-                }}
-                className="sm:w-52 sm:h-52 w-36 h-36 border-r border-t border-slate-700 relative"
-              >
-                {j % 2 === 0 && i % 2 === 0 ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-700 stroke-[1px] pointer-events-none"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-                  </svg>
-                ) : null}
-              </motion.div>
-            )
+            <motion.div
+              whileHover={{
+                backgroundColor: `var(${getRandomColor()})`,
+                transition: { duration: 0 },
+              }}
+           
+              key={`col` + j}
+              className="sm:w-52 sm:h-52 w-36 h-36 border-r border-t border-slate-700 relative"
+            >
+              {j % 2 === 0 && i % 2 === 0 ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-700 stroke-[1px] pointer-events-none"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 6v12m6-6H6"
+                  />
+                </svg>
+              ) : null}
+            </motion.div>
           ))}
         </div>
       ))}

@@ -7,7 +7,6 @@ import ThemeContextProvider from '@/context/theme-context'
 import { Toaster } from 'react-hot-toast'
 import ThemeSwitch from '@/components/theme-switch'
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { BoxesCore } from '@/components/ui/background-boxes'
 
 const inter = Inter({ subsets: ['latin'] })
 

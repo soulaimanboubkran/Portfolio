@@ -21,7 +21,13 @@ const Intro = () => {
     
   >     
         <div className="flex items-center justify-center">
-       
+        <div
+   
+  className="h-[40rem] sm:h-[80rem] absolute sm:-translate-x-1/2 -translate-x-2/4 sm:-translate-y-2/2 -translate-y-4/4 w-screen overflow-hidden flex items-center justify-center rounded-lg">
+  <div  className="absolute bg-[#FCF6F5FF]  dark:bg-gray-900 inset-0 w-full h-full  z-20 [mask-image:radial-gradient(transparent,#FCF6F5FF)] pointer-events-none" />
+  <BoxesCore />
+   
+    </div>
 
                <div className="relative">
                  <motion.div

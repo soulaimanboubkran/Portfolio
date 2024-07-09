@@ -20,7 +20,6 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
-  const isMobileViewport = window.innerWidth <= 768;
   return (
     <div
     style={{

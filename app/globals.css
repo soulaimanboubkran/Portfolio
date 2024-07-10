@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 html {
-  --line-color: #e5e7eb;
+  --line-color: rgba(0, 0, 0, 0);
 }
 
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+  --line-color: rgba(0, 0, 0, 0);
 }
 
 .borderBlack {

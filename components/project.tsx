@@ -76,14 +76,17 @@ export default function Project({title,description,tags,imageUrl,gitLink,web}:Pr
         sm:group-hover:-translate-x-3
         sm:group-hover:translate-y-3
         sm:group-hover:-rotate-2
-
+        dark:sm:group-hover:shadow-red-500
+        sm:group-hover:shadow-blue-700
         sm:group-even:group-hover:translate-x-3
         sm:group-even:group-hover:translate-y-3
         sm:group-even:group-hover:rotate-2
 
         sm:group-even:right-[initial] sm:group-even:-left-40"
         />
+ 
       </section>
+     
   </motion.div>
    
        

@@ -43,21 +43,30 @@ export const experiencesData = [
     icon: React.createElement(LuGraduationCap),
     date: "2022",
   },
+  
   {
-    title: "Full-Stack Developer",
+    title: "Back-End Developer",
     location: "Agadir",
     description:
-      "I worked as a ful-stack developer for a web job mession and one other in another webApp.",
+      "I worked as a Back-End Developer, designing and implementing the backend for a new forum using Laravel and SQL at (Yool Education).",
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - 2023",
+    date: "2023 - 2024",
+  },
+    {
+    title: "Back-End Developer",
+    location: "Agadir",
+    description:
+      "I worked as a Back-End Developer, rebuilding an existing library system for the organization of (Aliaaf). I focused on improving functionality, resolving latency issues, and making the system fully operational and professional.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 - 2024",
   },
   {
-    title: "Full-Stack Developer",
+    title: "Full-Stack Developer, more Back-End",
     location: "",
     description:
-      "I'm now a full-stack developer working as a freelancer (webApps, Blogs, E-commerce, Portfolios...). My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I am now a Full-Stack Developer working as a freelancer under the label of SELERIONS. I develop WebApps, Blogs, E-commerce sites, and portfolios, and we are open to any development projects.",
     icon: React.createElement(FaReact),
-    date: " present",
+    date: "present",
   },
 ] as const;
 

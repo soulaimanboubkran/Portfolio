@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -7,8 +7,32 @@ import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
 
-export default function Contact() {
+const Contact: React.FC = () => {
   const { ref } = useSectionInView("Contact");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const { data, error } = await sendEmail(
+        formData 
+);
+
+      if (error) {
+        toast.error(error);
+      } else {
+        toast.success("Email sent successfully!");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Failed to send email");
+    }
+
+    setLoading(false);
+  };
 
   return (
     <motion.section
@@ -37,21 +61,11 @@ export default function Contact() {
         </a>{" "}
         or through this form.
       </p>
-
       <form
-        className="mt-10 flex   flex-col dark:text-black"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
-        }}
+        className="mt-10 flex flex-col dark:text-black"
+        onSubmit={handleSubmit}
       >
-        <input
+       <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="senderEmail"
           type="email"
@@ -68,8 +82,10 @@ export default function Contact() {
           maxLength={5000}
          
         />
-        <SubmitBtn  />
+        <SubmitBtn  loading={loading} />
       </form>
     </motion.section>
   );
-}
+};
+
+export default Contact;

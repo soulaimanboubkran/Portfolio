@@ -7,6 +7,8 @@ import shoptop1 from '@/public/shoptop1.jpg'
 import Blog from "@/public/BLog.jpg"
 import webscraper from '@/public/webscraper.jpg'
 import real from '@/public/real.jpg';
+import fsf from '@/public/fsf.png';
+
 export const links = [
   {
     name: "Home",
@@ -88,7 +90,16 @@ export const projectsData = [
     imageUrl: real,
     gitLink:"https://github.com/soulaimanboubkran/RealEstatePF",
     web:""
-  }, {
+  }
+  , {
+    title: "Fail-success",
+    description:
+      "This was the fastest full-stack project I've completed, highlighting the importance of commitment in achieving success or failing facing challenges in your missions.",
+    tags: ["React", "tailwind css","Express","Typescript","express","NoSql","OAuth-(Google-auth)..."],
+    imageUrl:fsf,
+    gitLink:"https://github.com/soulaimanboubkran/fail-success-client",
+    web:"https://www.fail-success.xyzp"
+  },{
     title: "WebSty",
     description:
       "This library provides a collection of JSX components designed to assist students in quickly finding well-styled components for ReactJS and JSX. Additionally, it features an integrated online code editor option, enhancing the learning experience.",

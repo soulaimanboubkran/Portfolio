@@ -98,7 +98,7 @@ export const projectsData = [
     tags: ["React", "tailwind css","Express","Typescript","express","NoSql","OAuth-(Google-auth)..."],
     imageUrl:fsf,
     gitLink:"https://github.com/soulaimanboubkran/fail-success-client",
-    web:"https://www.fail-success.xyzp"
+    web:"https://www.fail-success.xyz"
   },{
     title: "WebSty",
     description:

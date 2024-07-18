@@ -12,12 +12,7 @@ import Skills from "@/components/skills";
 export default function Home() {
   return (
     <>
-  <div 
-   
-   className=" absolute  -top-96 w-full overflow-hidden flex items-center justify-center rounded-lg">
-
  
-     </div> 
     <main className="flex flex-col items-center z-[998] dark:z-[998] px-4">
   
      <Intro/>

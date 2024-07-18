@@ -18,12 +18,9 @@ export default function Project({title,description,tags,imageUrl,gitLink,web}:Pr
     const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   
   return (
-    <motion.div
+    <div
     ref={ref}
-    style={{
-      scale: scaleProgess,
-      opacity: opacityProgess,
-    }}
+    
  
     className="group max-h-screen mb-3  sm:mb-8 last:mb-0"
   >
@@ -87,7 +84,7 @@ export default function Project({title,description,tags,imageUrl,gitLink,web}:Pr
  
       </section>
      
-  </motion.div>
+  </div>
    
        
   

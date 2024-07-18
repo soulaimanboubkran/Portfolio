@@ -9,7 +9,7 @@ import { useSectionInView } from '@/lib/hooks'
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.1); // Adjusting threshold to be more sensitive
   return (
-    <section ref={ref} id='projects' className="scroll-mt-44 h-auto mb-28">
+    <section ref={ref} id='projects' className="relative z-30 scroll-mt-44 h-auto mb-28">
         <SectionHeading>My projects</SectionHeading>
         <div>
             {projectsData.map((project,index)=>(

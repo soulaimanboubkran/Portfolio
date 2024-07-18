@@ -71,8 +71,8 @@ const Intro = () => {
     animate={{ opacity: 1, y: 0 }}
   >
     <span className="font-bold z-20 dark:text-white text-black">Hello, I am Soulaimane.</span> I am a{" "}
-    <span className="font-bold z-20 dark:text-white text-black">full-stack developer</span> with{" "}
-    <span className="font-bold z-20 dark:text-white text-black">2 years</span> of experience. I enjoy
+    <span className="font-bold z-20 dark:text-white text-black">full-stack developer</span> More{" "}
+    <span className="font-bold z-20 dark:text-white text-black">BackEnd one</span>. I enjoy
     building <span className="italic z-20 dark:text-white text-black"><FlipWords words={['Sites','Apps','Back-End']} duration={2000} className='filpWords'/>.</span>
   </motion.h1>
 

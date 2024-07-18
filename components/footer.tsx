@@ -11,8 +11,7 @@ export default function Footer() {
         React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
         Framer Motion, React Email & Resend, Vercel hosting.
       </p>
-      <p className="text-center  text-5xl md:text-6xl lg:text-[14rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 dark:from-slate-950 to-neutral-200 dark:to-[#3a8557] inset-x-0">
-        SOULAIMANE</p>
+      
     </footer>
   );
 }

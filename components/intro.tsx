@@ -68,8 +68,8 @@ const Intro = () => {
   <motion.h1
     className="mb-10 mt-4 z-20 px-4 text-2xl font-medium dark:text-white text-black !leading-[1.5] sm:text-4xl relative"
     initial={{ opacity: 0, y: 100 }}
-    animate={{ opacity: 1, y: 0 }}
-  >
+    animate={{ opacity: 1, y: 0 }} 
+  > 
     <span className="font-bold z-20 dark:text-white text-black">Hello, I am Soulaimane.</span> I am a{" "}
     <span className="font-bold z-20 dark:text-white text-black">full-stack developer</span> More{" "}
     <span className="font-bold z-20 dark:text-white text-black">BackEnd one</span>. I enjoy

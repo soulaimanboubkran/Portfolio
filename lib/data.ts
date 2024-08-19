@@ -150,5 +150,5 @@ export const skillsData = [
   "PostgreSQL",
   "Python",
 
-  "Framer Motion",
+  "Framer Motion","Jest testing"
 ] as const;

@@ -27,7 +27,6 @@ export default function RootLayout({
  <div className='pt-32 sm:pt-40 bg-[#F9F5EB] dark:bg-slate-950 text-gray-950 relative   dark:text-gray-50 dark:text-opacity-90'>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            
             <Header />
             {children}
          <SpeedInsights/>

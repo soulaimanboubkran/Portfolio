@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import we from '@/public/we.jpg'
-import shoptop1 from '@/public/shoptop1.jpg'
+import shoptop1 from '@/public/shoptop.png'
 import Blog from "@/public/BLog.jpg"
 import webscraper from '@/public/webscraper.jpg'
 import real from '@/public/real.jpg';

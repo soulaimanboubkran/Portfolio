@@ -9,9 +9,9 @@ import webscraper from '@/public/webscraper.jpg'
 import real from '@/public/real.jpg';
 import fsf from '@/public/fsf.png';
 import { Feature } from "@/components/ui/card";
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaJs, FaReact, FaDocker, FaGit, FaNodeJs, FaPython } from 'react-icons/fa';
-import { DiCss3, DiJavascript1, DiNodejs, DiReact, DiGit, DiDocker, DiMongodb, DiPostgresql } from 'react-icons/di';
-import { SiTypescript, SiTailwindcss, SiNextdotjs, SiAuthy, SiPrisma, SiRedux, SiGraphql, SiExpress, SiMongodb, SiFramer, SiJest } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaBootstrap,  FaReact, FaDocker, FaNodeJs, FaPython } from 'react-icons/fa';
+import {  DiJavascript1,  DiReact, DiGit,  DiMongodb, DiPostgresql } from 'react-icons/di';
+import { SiTypescript, SiTailwindcss, SiNextdotjs, SiAuthy, SiPrisma, SiRedux, SiGraphql, SiExpress,  SiFramer, SiJest } from 'react-icons/si';
 import { SiStrapi } from "react-icons/si";
 
 export const links = [

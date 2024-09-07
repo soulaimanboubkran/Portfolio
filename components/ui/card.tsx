@@ -60,6 +60,7 @@ const FeaturesSectionDemo: React.FC<FeaturesSectionDemoProps> = ({ grid }) => {
                 )}
               </ul>
             </div>
+            
             <Image
               src={feature.imageUrl}
               alt={`Image for ${feature.title}`}

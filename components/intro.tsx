@@ -62,7 +62,7 @@ const Intro = () => {
     <span className="font-bold z-20 dark:text-white text-black">Hello, I am <Cover>Soulaimane.</Cover></span> a{" "}
     <span className="font-bold z-20 dark:text-white text-black">full-stack developer</span> More{" "}
     <span className="font-bold z-20 dark:text-white text-black">BackEnd one</span>. I enjoy
-    building <span className="italic z-20 dark:text-white text-black"><FlipWords words={['Sites','Apps','Back-End']} duration={2000} className='filpWords'/>.</span>
+    building <span className="italic z-20 dark:text-white text-black"><FlipWords words={['Sites','Apps','Back-End']} duration={2000} className='filpWords absolute'/>.</span>
   </motion.h1>
 
   <motion.div 

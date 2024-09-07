@@ -7,6 +7,7 @@ import ThemeContextProvider from '@/context/theme-context'
 import { Toaster } from 'react-hot-toast'
 import ThemeSwitch from '@/components/theme-switch'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import {NextUIProvider} from "@nextui-org/react";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,14 +22,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className=' !scroll-smooth' >
+    <html lang="en" >
   <body className="">
-  
+ 
  <div className='pt-32 sm:pt-40 bg-[#F9F5EB] dark:bg-slate-950 text-gray-950 relative   dark:text-gray-50 dark:text-opacity-90'>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
+          <NextUIProvider>
             <Header />
-            {children}
+            {children}</NextUIProvider>
          <SpeedInsights/>
             <Toaster position="top-right" />
             <ThemeSwitch />

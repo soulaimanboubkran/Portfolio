@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@next-js/hooks": "^0.0.1-beta",
+    "@nextui-org/image": "^2.0.31",
+    "@nextui-org/react": "^2.4.6",
     "@react-email/components": "^0.0.21",
     "@react-email/tailwind": "^0.0.18",
     "@tsparticles/engine": "^3.5.0",
@@ -30,7 +32,7 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.49.3",
     "react-hot-toast": "^2.4.1",
-    "react-icons": "^4.11.0",
+    "react-icons": "^4.12.0",
     "react-intersection-observer": "^9.5.2",
     "react-vertical-timeline-component": "^3.6.0",
     "resend": "^3.4.0",

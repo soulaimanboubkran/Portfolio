@@ -2,9 +2,10 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { skillsData } from "@/lib/data";
+import { skillIcons, skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
+
+
 
 
 
@@ -20,15 +21,23 @@ export default function Skills() {
     >
       <SectionHeading>My skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
+      {skillsData.map((skill, index) => {
+        const Icon = skillIcons[skill] || null; // Get the icon component or null if not found
+
+        return (
           <li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-    
+          className="relative bg-white  rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+          key={index}
           >
             {skill}
+            {Icon && (
+               <span className="absolute bottom-1 right-1 flex items-end justify-end z-10">
+                <Icon />
+              </span>
+            )}
           </li>
-        ))}
+        );
+      })}
       </ul>
     </section>
   );

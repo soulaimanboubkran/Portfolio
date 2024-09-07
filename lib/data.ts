@@ -16,27 +16,27 @@ import { SiStrapi } from "react-icons/si";
 
 export const links = [
   {
-    name: "Home",
+    name: "HOME",
     hash: "#home",
   },
   {
-    name: "About",
+    name: "ABOUT",
     hash: "#about",
   },
   {
-    name: "Projects",
+    name: "PROJECTS",
     hash: "#projects",
   },
   {
-    name: "Skills",
+    name: "SKILLS",
     hash: "#skills",
   }, 
   {
-    name: "Experience",
+    name: "EXPERIENCES",
     hash: "#experience",
   },
   {
-    name: "Contact",
+    name: "CONTACT",
     hash: "#contact",
   },
 ] as const;

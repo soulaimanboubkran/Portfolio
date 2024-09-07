@@ -10,7 +10,7 @@ import { useSectionInView } from "@/lib/hooks";
 
 
 export default function Skills() {
-  const { ref } = useSectionInView("Skills");
+  const { ref } = useSectionInView("SKILLS");
 
   return (
     <section

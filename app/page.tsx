@@ -26,7 +26,8 @@ export default function Home() {
      <Experience/>
 
      <Contact/>
-     <Footer/>
+     
+          <Footer/>
     </main></>
   )
 }

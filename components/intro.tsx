@@ -11,7 +11,7 @@ import { FlipWords } from './ui/flip-words'
 import { BoxesCore } from './ui/background-boxes'
 import { Cover } from './ui/cover'
 const Intro = () => {
-  const {ref} = useSectionInView("Home")
+  const {ref} = useSectionInView("HOME")
   
   return (<>
         

@@ -8,7 +8,7 @@ import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
 
 const Contact: React.FC = () => {
-  const { ref } = useSectionInView("Contact");
+  const { ref } = useSectionInView("CONTACT");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

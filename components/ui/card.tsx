@@ -19,14 +19,14 @@ interface FeaturesSectionDemoProps {
 const FeaturesSectionDemo: React.FC<FeaturesSectionDemoProps> = ({ grid }) => {
   return (
     <>
-      {grid.map((feature) => (
+      {grid.map((feature,index) => (
         <div
           key={feature.id}
           className="group max-h-screen mb-3 sm:mb-8 last:mb-0"
         >
           <section className="bg-gray-100 max-w-[46rem] border border-black/5 rounded-2xl overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
             <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[55%] flex flex-col h-full sm:group-even:ml-[18rem]">
-              <Grid size={30} />
+            <Grid index={index} size={30} />
               <h3 className="text-2xl font-semibold">{feature.title}</h3>
               <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
                 {feature.description}
@@ -75,11 +75,12 @@ const FeaturesSectionDemo: React.FC<FeaturesSectionDemoProps> = ({ grid }) => {
 };
 
 export default FeaturesSectionDemo;
-
 export const Grid = ({
+  index, // Index to control position
   pattern,
   size,
 }: {
+  index: number;
   pattern?: number[][];
   size?: number;
 }) => {
@@ -90,21 +91,36 @@ export const Grid = ({
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
   ];
+
+  // Determine if the grid should be left or right based on index
+  const isLeft = index % 2 === 0;
+  const gradientDirection = isLeft ? "bg-gradient-to-r" : "bg-gradient-to-l";
+
   return (
-    <div className="pointer-events-none absolute left-1/2 top-0  -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-      <div className="absolute inset-0 bg-gradient-to-r  [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 dark:to-zinc-900/30 opacity-100">
+    <div
+      className={`pointer-events-none absolute top-0 ${
+        // Apply different positioning for desktop and mobile
+        isLeft
+          ? "sm:right-2/4 sm:-mr-20 right-0" // Desktop: right, Mobile: full width
+          : "sm:left-1/2 sm:-ml-20 left-0"   // Desktop: left, Mobile: full width
+      } -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]`}
+    >
+      <div
+        className={`absolute inset-0 ${gradientDirection} [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 dark:to-zinc-900/30 opacity-100`}
+      >
         <GridPattern
           width={size ?? 20}
           height={size ?? 20}
-          x="-12"
+          x={isLeft ? "70" : "40"} // Switch grid position too
           y="4"
           squares={p}
-          className="absolute inset-0 h-full w-full  mix-blend-overlay dark:fill-white/10 dark:stroke-white/10 stroke-black/10 fill-black/10"
+          className="absolute inset-0 h-full w-full mix-blend-overlay dark:fill-white/10 dark:stroke-white/10 stroke-black/10 fill-black/10"
         />
       </div>
     </div>
   );
 };
+
 
 export function GridPattern({ width, height, x, y, squares, ...props }: any) {
   const patternId = useId();

@@ -14,7 +14,7 @@ export default function About() {
  const {ref} = useSectionInView("ABOUT")
   return (
     <>
-                 <div className='relative z-30 dark:bg-slate-950 bg-[rgb(249,245,235)] bg-opacity-75 rounded-2xl py-1 my-3 px-3 dark:bg-opacity-75 backdrop-blur-[0.3rem]'>
+                 <div className='relative z-30'>
 
     <motion.section
      ref={ref}

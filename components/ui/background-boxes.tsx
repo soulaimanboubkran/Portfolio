@@ -2,19 +2,30 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { useTheme } from "@/context/theme-context";
 
 export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
+  const { theme } = useTheme(); // Get the current theme (light or dark)
+  
   const rows = new Array(10).fill(1); // Adjust the grid size as needed
   const cols = new Array(18).fill(1);
 
-  // New refined color palette: black, shiny blue, and white
-  const colors = [
-    "--slate-950", // Black
-    "--gray-50", // Shiny blue
-    "--teal-800", // White
+  // Color sets for light and dark modes
+  const lightModeColors = [
+    "--teal-100", // Light teal
+    "--blue-300", // Light blue
+    "--gray-50", // Light gray
   ];
 
+  const darkModeColors = [
+    "--slate-950", // Black
+    "--teal-300", // Shiny blue
+    "--teal-600", // White
+  ];
+
+  // Get color based on current theme
   const getRandomColor = () => {
+    const colors = theme === "dark" ? darkModeColors : lightModeColors;
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
@@ -27,9 +38,9 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
         `var(${getRandomColor()})`,
       ],
       transition: {
-        duration: 5, // Reduced speed for slower waves
+        duration: 5, // Slower waves
         repeat: Infinity,
-        ease: "easeIn",
+        ease: "easeInOut",
         delay: i * 0.3, // Staggered delay for smoother waves
       },
     }),
@@ -41,7 +52,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
         transform: `skewX(-30deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
       }}
       className={cn(
-        "absolute left-1/4  p-4 flex -translate-x-1/2 -translate-y-1/2 w-full h-full -inset-2 z-0",
+        "absolute left-1/4 p-4 flex -translate-x-1/2 -translate-y-1/2 w-full h-full -inset-2 z-0",
         className
       )}
       {...rest}
@@ -49,12 +60,12 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       {rows.map((_, i) => (
         <div
           key={`row` + i}
-          className="sm:w-52 bg-[rgb(249,245,235)] dark:bg-slate-950 sm:h-52 w-36 h-36 border-l border-slate-700 relative"
+          className="sm:w-52 sm:h-52 w-36 h-36 relative border-l   border-slate-700 dark:border-slate-300"
         >
           {cols.map((_, j) => (
             <motion.div
               key={`col` + j}
-              className="sm:w-52 sm:h-52 w-36 h-36 border-r border-t border-slate-700 relative"
+              className="sm:w-52 sm:h-52 w-36 h-36 relative border-r border-t border-slate-700 dark:border-slate-300"
               custom={i + j} // Pass a unique index for staggered animation
               variants={boxVariants}
               animate="animate" // Automatically animate without hover
@@ -66,7 +77,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-700 stroke-[1px] pointer-events-none"
+                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-700 dark:text-slate-800 stroke-[1px] pointer-events-none"
                 >
                   <path
                     strokeLinecap="round"

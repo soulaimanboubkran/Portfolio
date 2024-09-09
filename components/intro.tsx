@@ -23,7 +23,7 @@ const Intro = () => {
   >     
         <div className="flex items-center justify-center">
         <div
-  className=" h-[40rem] sm:h-[190rem] absolute sm:-translate-x-1/2 -translate-x-2/4 sm:-translate-y-2/2 -translate-y-4/4 w-screen overflow-hidden items-center justify-center rounded-lg"
+  className=" h-[84rem] sm:h-[190rem] absolute sm:-translate-x-1/2 -translate-x-2/4 sm:-translate-y-2/2 -translate-y-4/4 w-screen overflow-hidden items-center justify-center rounded-lg"
 >
   <BoxesCore />
 </div>
@@ -53,7 +53,7 @@ const Intro = () => {
                
                </div>
              </div>
-             <div className='relative z-30 dark:bg-slate-950 bg-[rgb(249,245,235)] bg-opacity-75 rounded-2xl py-1 my-3 dark:bg-opacity-75 backdrop-blur-[0.3rem]'>
+             <div className='relative z-30  '>
               <div className=''>
   <motion.h1
     className="mb-10 mt-4 z-20 px-4 text-2xl font-medium dark:text-white text-black !leading-[1.5] sm:text-4xl relative"

@@ -4,29 +4,44 @@ import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
-  const rows = new Array(100).fill(1);
-  const cols = new Array(100).fill(1);
-  let colors = [
-    "--sky-300",
-    "--pink-300",
-    "--green-300",
-    "--yellow-300",
-    "--red-300",
-    "--purple-300",
-    "--blue-300",
-    "--indigo-300",
-    "--violet-300",
+  const rows = new Array(10).fill(1); // Adjust the grid size as needed
+  const cols = new Array(18).fill(1);
+
+  // New refined color palette: black, shiny blue, and white
+  const colors = [
+    "--slate-950", // Black
+    "--gray-50", // Shiny blue
+    "--teal-800", // White
   ];
+
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
+
+  // Motion variants for the automatic wave-like color transition
+  const boxVariants = {
+    animate: (i: number) => ({
+      backgroundColor: [
+        `var(${getRandomColor()})`,
+        `var(${getRandomColor()})`,
+        `var(${getRandomColor()})`,
+      ],
+      transition: {
+        duration: 5, // Reduced speed for slower waves
+        repeat: Infinity,
+        ease: "easeIn",
+        delay: i * 0.3, // Staggered delay for smoother waves
+      },
+    }),
+  };
+
   return (
     <div
-    style={{
-        transform: ` skewX(-30deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
-      }} 
+      style={{
+        transform: `skewX(-30deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
+      }}
       className={cn(
-      "absolute left-1/4 p-4  flex  -translate-x-1/2 -translate-y-1/2 w-full h-full -inset-2 z-0 ",
+        "absolute left-1/4  p-4 flex -translate-x-1/2 -translate-y-1/2 w-full h-full -inset-2 z-0",
         className
       )}
       {...rest}
@@ -34,17 +49,15 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       {rows.map((_, i) => (
         <div
           key={`row` + i}
-          className="sm:w-52 sm:h-52 w-36 h-36 border-l  border-slate-700 relative"
+          className="sm:w-52 bg-[rgb(249,245,235)] dark:bg-slate-950 sm:h-52 w-36 h-36 border-l border-slate-700 relative"
         >
           {cols.map((_, j) => (
             <motion.div
-              whileHover={{
-                backgroundColor: `var(${getRandomColor()})`,
-                transition: { duration: 0 },
-              }}
-           
               key={`col` + j}
               className="sm:w-52 sm:h-52 w-36 h-36 border-r border-t border-slate-700 relative"
+              custom={i + j} // Pass a unique index for staggered animation
+              variants={boxVariants}
+              animate="animate" // Automatically animate without hover
             >
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg

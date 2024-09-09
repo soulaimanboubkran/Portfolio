@@ -14,6 +14,8 @@ export default function About() {
  const {ref} = useSectionInView("ABOUT")
   return (
     <>
+                 <div className='relative z-30 dark:bg-slate-950 bg-[rgb(249,245,235)] bg-opacity-75 rounded-2xl py-1 my-3 px-3 dark:bg-opacity-75 backdrop-blur-[0.3rem]'>
+
     <motion.section
      ref={ref}
       className="mb-10 max-w-[45rem] text-center leading-8 dark:z-[1] z-[1] scroll-mt-28"
@@ -46,7 +48,7 @@ export default function About() {
       </p>
     
     </motion.section>
-
+</div>
     </>
   );
 }

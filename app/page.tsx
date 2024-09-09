@@ -17,7 +17,7 @@ export default function Home() {
     <main className="flex flex-col items-center z-[998] dark:z-[998] px-4">
     <section
     
-  className="mb-28   max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+  className="  max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     id="home"
     
   >

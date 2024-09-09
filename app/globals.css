@@ -3,3 +3,16 @@
 @tailwind utilities;
 
 
+html, body {
+    overscroll-behavior-y: none; /* Prevent the pull-to-refresh behavior */
+  }
+  body, img, a {
+    -webkit-touch-callout: none; /* Prevent callout menu */
+    -webkit-user-select: none;   /* Disable text selection */
+  }html {
+    scroll-behavior: smooth;
+  }
+  .background-effect {
+    background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0.1));
+  }
+  

@@ -62,9 +62,12 @@ const FeaturesSectionDemo: React.FC<FeaturesSectionDemoProps> = ({ grid }) => {
             </div>
             
             <Image
-              src={feature.imageUrl}
-              alt={`Image for ${feature.title}`}
-              quality={95}
+               src={feature.imageUrl}
+               alt={`Image for ${feature.title}`}
+               quality={85} // Reduce image quality to lower the load on the device
+               sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw" // Use responsive sizes
+               priority={index === 0} // Prioritize loading for the first image
+               placeholder="blur" // Use blur-up effect to prevent layout shifts
               className="sm:absolute sticky block sm:block top-8 -right-40 w-[28.25rem] sm:rounded-t-2xl rounded-b-2xl shadow-2xl sm:transition sm:group-hover:scale-[1.04] sm:group-hover:-translate-x-3 sm:group-hover:translate-y-3 sm:group-hover:-rotate-2 dark:sm:group-hover:shadow-white sm:group-hover:shadow-black sm:group-even:group-hover:translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-2 sm:group-even:right-[initial] sm:group-even:-left-40"
             />
           </section>

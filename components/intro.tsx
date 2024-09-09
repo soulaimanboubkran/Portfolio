@@ -22,11 +22,7 @@ const Intro = () => {
     
   >     
         <div className="flex items-center justify-center">
-        <div
-  className=" h-[84rem] sm:h-[190rem] absolute sm:-translate-x-1/2 -translate-x-2/4 sm:-translate-y-2/2 -translate-y-4/4 w-screen overflow-hidden items-center justify-center rounded-lg"
->
-  <BoxesCore />
-</div>
+        
 
 
                <div className="relative">

@@ -15,4 +15,17 @@ html, body {
   .background-effect {
     background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0.1));
   }
-  
+  /* Add custom media queries for smaller screens */
+@media (max-width: 640px) {
+  .box-small {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 641px) {
+  .box-large {
+    width: 52px;
+    height: 52px;
+  }
+}

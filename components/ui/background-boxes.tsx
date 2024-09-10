@@ -60,8 +60,8 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
               className={cn(
                 // Responsive box sizes
                 "relative border-r border-t border-slate-700 dark:border-slate-300",
-                "w-12 h-16", // Default small box size
-                "sm:w-16 sm:h-20", // Slightly larger on small screens
+                "w-16 h-20", // Default small box size
+                "sm:w-16 sm:h-28", // Slightly larger on small screens
                 "md:w-24 md:h-28", // Larger on medium screens
                 "lg:w-40 lg:h-44" // Largest on large screens
               )}

@@ -9,7 +9,7 @@ import webscraper from '@/public/webscraper.jpg'
 import real from '@/public/real.jpg';
 import fsf from '@/public/fsf.png';
 import { Feature } from "@/components/ui/card";
-import { FaHtml5, FaCss3Alt, FaBootstrap,  FaReact, FaDocker, FaNodeJs, FaPython } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaBootstrap,  FaReact, FaDocker, FaNodeJs, FaPython,FaLaravel } from 'react-icons/fa';
 import {  DiJavascript1,  DiReact, DiGit,  DiMongodb, DiPostgresql } from 'react-icons/di';
 import { SiTypescript, SiTailwindcss, SiNextdotjs, SiAuthy, SiPrisma, SiRedux, SiGraphql, SiExpress,  SiFramer, SiJest } from 'react-icons/si';
 import { SiStrapi } from "react-icons/si";
@@ -154,6 +154,7 @@ export const skillsData = [
   "CMS",
   "Express",
   "PostgreSQL",
+  "Laravel",
   "Python",
   "Framer Motion",
   "Jest testing"
@@ -180,6 +181,7 @@ export const skillIcons: Record<string, React.ComponentType> = {
   "CMS": SiStrapi, // Ensure you have an icon for CMS or remove this line if not available
   "Express": SiExpress,
   "PostgreSQL": DiPostgresql,
+  "Laravel":FaLaravel,
   "Python": FaPython,
   "Framer Motion": SiFramer,
   "Jest testing": SiJest

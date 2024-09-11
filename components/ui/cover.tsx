@@ -98,45 +98,47 @@ export const Cover = ({
           }}
         />
       ))}
-      <motion.span
-        key={String(hovered)}
-        animate={{
-          scale: hovered ? 0.8 : 1,
-          x: hovered ? [0, -30, 30, -30, 30, 0] : 0,
-          y: hovered ? [0, 30, -30, 30, -30, 0] : 0,
-        }}
-        exit={{
-          filter: "none",
-          scale: 1,
-          x: 0,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.2,
-          x: {
-            duration: 0.2,
-            repeat: Infinity,
-            repeatType: "loop",
-          },
-          y: {
-            duration: 0.2,
-            repeat: Infinity,
-            repeatType: "loop",
-          },
-          scale: {
-            duration: 0.2,
-          },
-          filter: {
-            duration: 0.2,
-          },
-        }}
-        className={cn(
-          "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-200",
-          className
-        )}
-      >
-        {children}
-      </motion.span>
+     <motion.span
+  key={String(hovered)}
+  animate={{
+    scale: hovered ? 0.8 : 1,
+    x: hovered ? [0, -30, 30, -30, 30, 0] : 0,
+    y: hovered ? [0, 30, -30, 30, -30, 0] : 0,
+  }}
+  exit={{
+    filter: "none",
+    scale: 1,
+    x: 0,
+    y: 0,
+  }}
+  transition={{
+    duration: 0.2,
+    x: {
+      duration: 0.2,
+      repeat: Infinity,
+      repeatType: "loop",
+    },
+    y: {
+      duration: 0.2,
+      repeat: Infinity,
+      repeatType: "loop",
+    },
+    scale: {
+      duration: 0.2,
+    },
+    filter: {
+      duration: 0.2,
+    },
+  }}
+  className={cn(
+    "inline-block relative z-20 transition duration-200", // Add the base styles here
+    hovered ? "text-red-500" : "dark:text-white text-neutral-900", // Change text color on hover
+    className
+  )}
+>
+  {children}
+</motion.span>
+
       <CircleIcon className="absolute -right-[2px] -top-[2px]" />
       <CircleIcon className="absolute -bottom-[2px] -right-[2px]" delay={0.4} />
       <CircleIcon className="absolute -left-[2px] -top-[2px]" delay={0.8} />

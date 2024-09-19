@@ -50,7 +50,14 @@ export const experiencesData = [
     icon: React.createElement(LuGraduationCap),
     date: "2022",
   },
-  
+  {
+    title: "Graduated NTIC",
+    location: "Agadir",
+    description:
+      "I graduated after 2 years of studying. In specialized institute of applied technology as a FullStack developer.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024",
+  },
   {
     title: "Back-End Developer",
     location: "Agadir",

@@ -11,7 +11,7 @@ export default function Footer() {
         React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
         Framer Motion, React Email & Resend, Vercel hosting.
       </p>
-      
+      <p className="text-xs mt-2">4.8.15.16.23.42</p>
     </footer>
   );
 }

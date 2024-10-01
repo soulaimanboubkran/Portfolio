@@ -14,6 +14,7 @@ export default function About() {
  const {ref} = useSectionInView("ABOUT")
   return (
     <>
+    
                  <div className='relative z-30'>
 
     <motion.section

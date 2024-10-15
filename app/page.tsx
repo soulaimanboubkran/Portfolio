@@ -8,7 +8,6 @@ import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { BoxesCore } from "@/components/ui/background-boxes";
 
 export default function Home() {
@@ -17,9 +16,7 @@ export default function Home() {
    
     <main className="flex flex-col items-center z-[998] dark:z-[998] px-4">
       {/* BackgroundBeams should only be visible on desktop (md and larger screens) */}
-      <div className="hidden md:block">
-          <BackgroundBeams />
-        </div>
+  
     <section
     
   className="  max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
@@ -42,8 +39,9 @@ export default function Home() {
      <Skills/>
 
      <Experience/>
-
-     <Contact/>
+     <div className="relative z-[999]">
+          <Contact />
+        </div>
      
           <Footer/>
     </main></>

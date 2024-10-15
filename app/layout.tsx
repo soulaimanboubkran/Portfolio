@@ -8,6 +8,7 @@ import { Toaster } from 'react-hot-toast'
 import ThemeSwitch from '@/components/theme-switch'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import {NextUIProvider} from "@nextui-org/react";
+import { BackgroundBeams } from '@/components/ui/background-beams'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +31,9 @@ export default function RootLayout({
           <ActiveSectionContextProvider>
           <NextUIProvider>
             <Header />
+            <div className="hidden md:block  z-[0]">
+          <BackgroundBeams />
+        </div>
             {children}</NextUIProvider>
          <SpeedInsights/>
             <Toaster position="top-right" />

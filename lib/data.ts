@@ -9,9 +9,9 @@ import webscraper from '@/public/webscraper.jpg'
 import real from '@/public/real.jpg';
 import fsf from '@/public/fsf.png';
 import { Feature } from "@/components/ui/card";
-import { FaHtml5, FaCss3Alt, FaBootstrap,  FaReact, FaDocker, FaNodeJs, FaPython,FaLaravel } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaBootstrap,  FaReact, FaDocker, FaNodeJs, FaPython,FaLaravel,FaJava  } from 'react-icons/fa';
 import {  DiJavascript1,  DiReact, DiGit,  DiMongodb, DiPostgresql } from 'react-icons/di';
-import { SiTypescript, SiTailwindcss, SiNextdotjs, SiAuthy, SiPrisma, SiRedux, SiGraphql, SiExpress,  SiFramer, SiJest } from 'react-icons/si';
+import { SiTypescript, SiTailwindcss, SiNextdotjs, SiAuthy, SiPrisma, SiRedux, SiGraphql, SiExpress,  SiFramer, SiJest ,SiDeno } from 'react-icons/si';
 import { SiStrapi } from "react-icons/si";
 
 export const links = [
@@ -164,7 +164,9 @@ export const skillsData = [
   "Laravel",
   "Python",
   "Framer Motion",
-  "Jest testing"
+  "Jest testing",
+  "Java",
+  "Deno"
 ] as const;
 
 // Map skill names to their corresponding icons using React.ComponentType
@@ -191,5 +193,8 @@ export const skillIcons: Record<string, React.ComponentType> = {
   "Laravel":FaLaravel,
   "Python": FaPython,
   "Framer Motion": SiFramer,
-  "Jest testing": SiJest
+  "Jest testing": SiJest,
+  "Java":FaJava ,
+  "Deno":SiDeno 
+
 };

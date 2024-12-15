@@ -1,15 +1,22 @@
 "use client";
-import React from "react";
+import React, { useMemo, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { cn } from "@/utils/cn";
 import { useTheme } from "@/context/theme-context";
 
-export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
-  const { theme } = useTheme(); // Get the current theme (light or dark)
+type BoxesCoreProps = {
+  rows?: number; // Number of rows
+  cols?: number; // Number of columns
+  className?: string; // Additional class names
+};
 
-  // Define a base number of rows and columns for desktop
-  const rows = new Array(10).fill(1);
-  const cols = new Array(18).fill(1);
+export const BoxesCore = ({
+  rows = 10, // Default to 10 rows
+  cols = 18, // Default to 18 columns
+  className,
+  ...rest
+}: BoxesCoreProps) => {
+  const { theme } = useTheme(); // Get the current theme (light or dark)
 
   // Color sets for light and dark modes
   const lightModeColors = ["--teal-200", "--blue-400", "--gray-150"];
@@ -22,30 +29,34 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
   };
 
   // Motion variants for independent fade-in and fade-out
-  const boxVariants = React.useMemo(() => ({
-    animate: () => ({
-      opacity: [0, 1, 0],
-      backgroundColor: [
-        `var(${getRandomColor()})`,
-        `var(${getRandomColor()})`,
-        `var(${getRandomColor()})`,
-      ],
-      transition: {
-        duration: Math.random() * 2 + 6,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: Math.random() * 7,
-        backgroundColor: {
-          duration: 50,
+  const boxVariants = useMemo(
+    () => ({
+      animate: () => ({
+        opacity: [0, 1, 0],
+        backgroundColor: [
+          `var(${getRandomColor()})`,
+          `var(${getRandomColor()})`,
+          `var(${getRandomColor()})`,
+        ],
+        transition: {
+          duration: Math.random() * 2 + 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: Math.random() * 7,
+          backgroundColor: {
+            duration: 50,
+          },
         },
-      },
+      }),
     }),
-  }), [theme]);
-  
+    [theme]
+  );
+
   const controls = useAnimation();
-  React.useEffect(() => {
+  useEffect(() => {
     controls.start("animate");
   }, [controls]);
+
   return (
     <div
       style={{
@@ -57,14 +68,12 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       )}
       {...rest}
     >
-      {rows.map((_, i) => (
-        <div
-          key={`row` + i}
-          className="relative p-4 "
-        >
-          {cols.map((_, j) => (
+      {/* Generate rows and columns based on props */}
+      {new Array(rows).fill(1).map((_, i) => (
+        <div key={`row-${i}`} className="relative p-4">
+          {new Array(cols).fill(1).map((_, j) => (
             <motion.div
-              key={`col` + j}
+              key={`col-${j}`}
               className={cn(
                 "relative my-5",
                 "rounded-lg", // Add rounded corners

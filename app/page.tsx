@@ -25,10 +25,10 @@ export default function Home() {
   >
         <div className="flex items-center justify-center">
         
-<div
-  className=" h-[84rem] sm:h-[190rem] absolute sm:-translate-x-1/2 -translate-x-2/4 sm:-translate-y-2/2 -translate-y-4/4 w-screen overflow-hidden items-center justify-center rounded-lg"
+        <div
+  className="h-[84rem] sm:h-[190rem] absolute sm:-translate-x-1/2 -translate-x-2/4 sm:-translate-y-2/2 -translate-y-4/4 w-screen overflow-hidden items-center justify-center rounded-lg"
 >
-  <BoxesCore />
+  <BoxesCore rows={15} cols={25} /> {/* Adjust rows and cols as needed */}
 </div></div></section>
      <Intro/>
      <SectionDivider/>

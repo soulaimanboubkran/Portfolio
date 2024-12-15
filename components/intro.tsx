@@ -20,33 +20,33 @@ const Intro = () => {
     id="home"
     
   >     
-        <div className="flex items-center justify-center">
+        <div className="flex items-center  justify-center">
         
 
 
-               <div className="relative">
-                 <motion.div
-                   initial={{ opacity: 0, scale: 0 }}
-                   animate={{ opacity: 1, scale: 1 }}
-                   transition={{
-                     type: "tween",
-                     duration: 0.2,
-                   }}
-                 >  
-                   <Image
-                     src="https://avatars.githubusercontent.com/u/115900176?v=4"
-                     alt="Soulaimane's portrait"
-                     width="192"
-                     height="192"
-                     quality="95"
-                     priority={true}
-                     className="h-24 z-20  w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-                   />
-                   
-                 </motion.div>
-               
-               
-               </div>
+        <div className="relative">
+  <motion.div
+    initial={{ opacity: 0, scale: 0 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      type: "tween",
+      duration: 0.2,
+    }}
+  >
+    <div className="h-24 w-24 rounded-full bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.3rem] dark:bg-gray-950 dark:bg-opacity-75 flex items-center justify-center overflow-hidden">
+      <Image
+        src="https://avatars.githubusercontent.com/u/115900176?v=4"
+        alt="Soulaimane's portrait"
+        width="192"
+        height="192"
+        quality="95"
+        priority={true}
+        className="h-full w-full object-cover"
+      />
+    </div>
+  </motion.div>
+</div>
+
              </div>
              <div className='relative z-30  '>
               <div className=''>

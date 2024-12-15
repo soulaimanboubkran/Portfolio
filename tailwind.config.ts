@@ -4,6 +4,7 @@ const {nextui} = require("@nextui-org/react");
 
 import  flattenColorPalette  from 'tailwindcss/lib/util/flattenColorPalette';
 const config: Config = {
+  darkMode: ['selector', '[data-theme="dark"]'],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -33,7 +34,7 @@ const config: Config = {
   plugins:[
     addVariablesForColors,nextui()
   ],
-  darkMode:"class",
+
   
 }
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

@@ -19,17 +19,17 @@ export default function Home() {
   
     <section
     
-  className="  max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+  className="   text-center sm:mb-0 scroll-mt-[100rem]"
     id="home"
     
   >
         <div className="flex items-center justify-center">
         
         <div
-  className="h-[84rem] sm:h-[190rem] absolute sm:-translate-x-1/2 -translate-x-2/4 sm:-translate-y-2/2 -translate-y-4/4 w-screen overflow-hidden items-center justify-center rounded-lg"
->
-  <BoxesCore rows={15} cols={25} /> {/* Adjust rows and cols as needed */}
-</div></div></section>
+            className="h-[90rem] sm:h-[190rem]  absolute sm:-translate-x-2/2 -translate-x-4/4 sm:-translate-y-2/2 -translate-y-4/4 w-full overflow-hidden items-center justify-center rounded-lg"
+          >
+            <BoxesCore rows={10} cols={15} /> {/* Adjust rows and cols dynamically */}
+          </div></div></section>
      <Intro/>
      <SectionDivider/>
      <About/>

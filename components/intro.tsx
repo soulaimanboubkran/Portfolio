@@ -8,8 +8,7 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from '@/lib/hooks'
 import { FlipWords } from './ui/flip-words'
-import { BoxesCore } from './ui/background-boxes'
-import { Cover } from './ui/cover'
+
 const Intro = () => {
   const {ref} = useSectionInView("HOME")
   
@@ -56,7 +55,7 @@ const Intro = () => {
     initial={{ opacity: 0, y: 100 }}
     animate={{ opacity: 1, y: 0 }} 
   > 
-    <span className="font-bold z-20 dark:text-white text-black">Hello, I am <Cover className=''>Soulaimane.</Cover></span> a{" "}
+    <span className="font-bold z-20 dark:text-white text-black">Hello, I am Soulaimane.</span> a{" "}
     <span className="font-bold z-20 dark:text-white text-black">full-stack developer</span> More{" "}
     <span className="font-bold z-20 dark:text-white text-black">BackEnd one</span>. I enjoy
     building <span className="italic z-20 dark:text-white text-black"><FlipWords words={['Sites','Apps','Back-End']} duration={2000} className='filpWords '/>.</span>
